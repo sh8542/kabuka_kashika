@@ -6,18 +6,18 @@ import streamlit as st
 st.title('米国株価可視化アプリ')
 
 st.sidebar.write("""
-    #GAFA株価
-    #こちらは株価可視化ツールです。以下のオプションから表示日数を指定できます。
+# GAFA株価
+こちらは株価可視化ツールです。以下のオプションから表示日数を指定できます。
 """)
 
 st.sidebar.write("""
-    #表示日数選択
+## 表示日数選択
 """)
 
-days = st.sidebar.slider('日数', 1, 6000, 3000)
+days = st.sidebar.slider('日数', 1, 3000, 365)
 
 st.write(f"""
-### 過去 **{days}**  日間のGAA株価
+### 過去 **{days}**  日間のGAFA株価
 """)
 
 @st.cache_data
@@ -36,7 +36,7 @@ def get_data(days, tickers):
 
 try:
     st.sidebar.write("""
-    ##株価の範囲指定
+    ## 株価の範囲指定
     """)
 
     ymin, ymax = st.sidebar.slider(
