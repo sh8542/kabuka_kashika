@@ -46,6 +46,7 @@ try:
 
     tickers = {
         'apple': 'AAPL',
+        'meta': 'META',
         'google': 'GOOGL',
         'microsoft': 'MSFT',
         'NETFLIX': 'NFLX',
